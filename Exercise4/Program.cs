@@ -8,9 +8,9 @@ namespace Exercise4
 {
     class Node
     {
-        public char[] ponco = new char[96];
+        public int ponco;
         public Node next;
-        public Node(char[] p, Node n)
+        public Node(int p, Node n)
         {
             ponco = p;
             next = n;
@@ -22,7 +22,10 @@ namespace Exercise4
 
         public Stacks()
         {
-            top = null;
+            int Stacks;
+            int top;
+
+            top = -1;
         }
 
         bool empty()
@@ -32,6 +35,7 @@ namespace Exercise4
             else
                 return (false);
         }
+
         public void pop()
         {
             Console.WriteLine("\nThe popped elements is: " + top.ponco);
