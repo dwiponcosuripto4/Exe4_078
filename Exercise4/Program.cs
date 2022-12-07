@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Exercise4
 {
-    class Program
+    class Node
     {
-        static void Main(string[] args)
+        public char[] ponco = new char[96];
+        public Node next;
+        public Node(char[] p, Node n)
         {
+            ponco = p;
+            next = n;
         }
     }
 }
