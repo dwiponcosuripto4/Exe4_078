@@ -92,7 +92,7 @@ namespace Exercise4
                         s.Push(num);
                         break;
                     case '3':
-                        s.display()
+                        s.display();
                 }
             }
         }
