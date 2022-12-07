@@ -20,7 +20,7 @@ namespace Exercise4
     {
         Node top;
 
-        public Stack()
+        public Stacks()
         {
             top = null;
         }
@@ -38,7 +38,7 @@ namespace Exercise4
             top = top.next;
         }
 
-        public void push(char[] element)
+        public void push(int element)
         {
             Node fresh;
             fresh = new Node(element, null);
@@ -64,7 +64,7 @@ namespace Exercise4
         }
         static void Main(string[] args)
         {
-            Stack s = new Stack();
+            Stacks s = new Stacks();
             while (true)
             {
                 Console.WriteLine();
@@ -89,10 +89,17 @@ namespace Exercise4
                     case '2':
                         Console.Write("\nEnter a number: ");
                         int num = Convert.ToInt32(Console.ReadLine());
-                        s.Push(num);
+                        s.push(num);
                         break;
                     case '3':
                         s.display();
+                        break;
+                    case '4':
+                        return;
+                    default:
+                        Console.WriteLine("\nInvalid Choice");
+                        break;
+
                 }
             }
         }
